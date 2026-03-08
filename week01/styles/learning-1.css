@@ -1,0 +1,28 @@
+.navigation { 
+
+  display: flex;
+  /* Ativação do Container: Para utilizar o sistema de Grid Layout, você precisa informar ao navegador que um elemento específico 
+  deve se comportar como um grid container. A única forma padrão de fazer isso é atribuindo o valor grid (ou inline-grid) à propriedade 
+  display, por isso usamos display e depois flex, estamos dizendo a propiedade display como ela se comportar.
+  
+  css funciona de hierarquia pai para filho, display grid vai ser sempre o pai ( container) e o posicionamento afetara os filhos
+  diretos ( items )*/
+  align-items: center;
+  flex: 1 1 auto;
+ }
+
+.navigation a {
+    /* e esses aqui são os items */
+
+    
+    flex: 1;
+    /* a solução é adicionar o flex dentro do da navigation para que ele corrija os elementos dentro da seleção, e não só os
+    que estão fora, flex no lado de fora centraliza a caixa que contem os elementos, mas não centraliza os elementos dentro 
+    dessa caixa*/
+
+    display: block;
+    color: #585858;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+} 

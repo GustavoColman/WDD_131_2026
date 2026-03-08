@@ -1,0 +1,176 @@
+/* Configurações Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #5e5e5e;
+}
+
+/* Header e Navegação */
+header {
+    background-color: #521818;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.top-banner {
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #990000;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* texto de titulo com meu nome */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Coluna da esquerda maior */
+    gap: 20px;
+}
+
+/* Estilo dos Cards */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: #853a3a;
+    
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Layout interno do Sobre Mim */
+.intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 120px;
+    border: 1px solid #ccc;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 80%;
+    margin: 10px auto 20px;
+}
+
+.location-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.flag-box {
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #555;
+}
+
+.flag-box img {
+    width: 150px;
+    border: 1px solid #ddd;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Lista de Recursos */
+.resources-card ul {
+    padding-left: 20px;
+}
+
+.resources-card li {
+    margin-bottom: 8px;
+}
+
+.resources-card a {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Footer ( aquela parte de baixo da pagina com a data e tudo mais )*/
+footer {
+    background-color: #701515;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.last-mod {
+    color: #ffff00; /* letrinhas em amarelo */
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro, .location-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

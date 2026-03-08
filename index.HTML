@@ -3,9 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131: Portfolio</title>
+    <link rel="stylesheet" href="week01\styles\base.css">
 </head>
 <body>
-    
+    <!-- parte superior da pagina, local de navegação-->
+    <header>
+        <div class="top-banner">
+            WDD 131: Dynamic Web Fundamentals
+        </div>
+        <!-- parte da seleção de links -->
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/gustavo-colman-ilustrador/">LinkedIn</a></li>
+                <li><a href="#">I-Learn</a></li>
+                <li><a href="#">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Gustavo Colman</h1>
+        <!--  parte cheia dos paranaué aonde tem minha cara e biografia-->
+        <div class="grid-container">
+            <section class="card about-card">
+                <div class="card-header">About Me</div>
+                <div class="card-body">
+                    <div class="intro">
+                        <p>
+                            colman biography placeholder aaaaaa
+                        </p>
+                        <img src="week01/images/605126051_1904559376800324_2327257157266131367_n.jpg" alt="gustavo colman" class="profile-img">
+                    </div>
+
+                    <h2 class="sub-title">rio grande do sul, brasil</h2>
+                    <hr>
+                    <!--  i thought nobody used hr anymore-->
+                      <!-- ( ps : my code is full of comentaries in portuguese to me not get counfused, because i am a
+                        bad programmer, so better you get used to it )-->
+                        <!-- ( ps2: i wish to be playing ark survival ascended whit my friends right now, are you still reading? )-->
+
+                    <div class="location-info">
+                        <div class="flag-box">
+                            <img src="week01\images\brasil flag.png" alt="Official Flag of brasil">
+                            <p>Official Flag of brasil</p>
+                        </div>
+                        <div class="location-text">
+                            Madagascar is the 4th largest island in the world and is located in the Indian Ocean. 
+                            It is home to 5% of the world's plant and animal species, of which more than 80% 
+                            are endemic to Madagascar. The island is best known for its lemurs, baobab trees, 
+                            and vanilla.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card resources-card">
+                <div class="card-header">Web Dev Resources</div>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="#">Dev.to Community</a></li>
+                        <li><a href="#">Smashing Magazine</a></li>
+                        <li><a href="#">CSS Tricks</a></li>
+                        <li><a href="#">W3 Schools</a></li>
+                        <li><a href="#">Udemy</a></li>
+                        <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;2026 😎 Gustavo colman 😎 brasil</p>
+        <p class="last-mod">Last Modification: 05/30/2025 13:54:42</p>
+    </footer>
+
 </body>
 </html>
