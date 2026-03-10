@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131: Portfolio</title>
+    <!-- no endereço do css usamos o atributo rel para chamar a pagina de estilos -->
     <link rel="stylesheet" href="week01\styles\base.css">
+    <!-- para chamar o javascript, usamos o atributo defer
+     "defer avisa ao navegador: "Carregue o script, mas só execute quando o HTML estiver todo pronto"-->
+    <script src="week01\scrypts\site_scripts.js" defer></script>
+</head>
 </head>
 <body>
     <!-- parte superior da pagina, local de navegação-->
@@ -34,7 +39,9 @@
                 <div class="card-body">
                     <div class="intro">
                         <p>
-                            colman biography placeholder aaaaaa
+                            My name is Gustavo Colman, i am a Comic Book artist and a 3d sculptor, i am cursing web and software development
+                            at byu idaho, i live in Rio grande do sul Brazil, im my free time i like to write my action comic Book
+                            and play some videogame whit friends
                         </p>
                         <img src="week01/images/605126051_1904559376800324_2327257157266131367_n.jpg" alt="gustavo colman" class="profile-img">
                     </div>
@@ -78,8 +85,10 @@
     </main>
 
     <footer>
-        <p>&copy;2026 😎 Gustavo colman 😎 brasil</p>
-        <p class="last-mod">Last Modification: 05/30/2025 13:54:42</p>
+        <p>&copy;<span id="currentyear"></span> 😎 Gustavo Colman 😎 Brasil</p>
+    
+    <p id="lastModified" class="last-mod"></p>
+    <!-- o id="" serve pra sinalizar ao javascript aonde colocar a informação das funções -->
     </footer>
 
 </body>

@@ -9,7 +9,7 @@ body {
 
 /* Header e Navegação */
 header {
-    background-color: #521818;
+    background-color: #2d425e;
     color: rgb(255, 255, 255);
     text-align: center;
 }
@@ -21,7 +21,7 @@ header {
 }
 
 nav {
-    background-color: #990000;
+    background-color: #3e5580;
     padding: 10px 0;
 }
 
@@ -37,10 +37,16 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    padding: 8px 15px; /* Cria uma área de clique maior */
+    border-radius: 4px; /* Arredonda os cantos do fundo */
+    transition: 0.3s; /* Faz a cor mudar suavemente */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* deixa o texto sublinhado */
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo claro ao apssar o mouse */
+    color: #ffff00; /* Muda a cor */
+    
 }
 
 /* Conteúdo Principal */
@@ -74,7 +80,7 @@ h1 {
 }
 
 .card-header {
-    background-color: #853a3a;
+    background-color: #5b63d6;
     
     color: white;
     padding: 10px;
@@ -150,7 +156,7 @@ hr {
 
 /* Footer ( aquela parte de baixo da pagina com a data e tudo mais )*/
 footer {
-    background-color: #701515;
+    background-color: #574f6e;
     color: white;
     text-align: center;
     padding: 20px;
