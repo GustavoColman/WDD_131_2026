@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131: Portfolio</title>
     <!-- no endereço do css usamos o atributo rel para chamar a pagina de estilos -->
-    <link rel="stylesheet" href="week01\styles\base.css">
+    <link rel="stylesheet" href="week01/styles/base.css">
     <!-- para chamar o javascript, usamos o atributo defer
-     "defer avisa ao navegador: "Carregue o script, mas só execute quando o HTML estiver todo pronto"-->
-    <script src="week01\scripts\site_scripts.js" defer></script>
+     "defer avisa ao navegador: "Carregue o script, mas só execute quando o HTML estiver todo pronto"
+
+     ATUALIZAÇÃO, 
+
+     O ARQUIVO ANTES ESTAVA COMO <script src="week01/scripts/site_scripts.js" defer></script> MAS ISSO ESTAVA CAUSANDO
+     um erro de sintaxe no lighthouse ( ferramenta de correção do site) por isso eu mudei o formato de evocação do scrpit
+      ( Nota: Quando você usa type="module", o navegador já aplica o comportamento do defer automaticamente, então 
+       você não precisa escrever a palavra defer.)
+     -->
+
+    <script src="week01/scripts/site_scripts.js" type="module"></script>
+
+    <!-- lembrar de usar / ao invez de \ quando programar, por que isso causa problemas no github que roda em linux -->
 </head>
-</head>
+
 <body>
     <!-- parte superior da pagina, local de navegação-->
     <header>
