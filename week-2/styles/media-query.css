@@ -1,0 +1,41 @@
+/* Isso aplica as regras aos três elementos de uma vez */
+header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #ddd; /* Borda suave , aquele quadradinho ali*/
+    padding: 20px;          /* Padding adequado */
+    background: radial-gradient(circle, rgb(173, 160, 233), rgb(123, 123, 204)); /* Exemplo de azul claro */
+}
+
+/* separou o main dentro do resto dos elementos da pagina */ 
+main {
+    display:  grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+/* separou o section dentro do main pra criar os quadradinhos */
+section{
+    padding: 1rem;
+    background-color: rgb(137, 82, 189);
+}
+
+
+h2 {
+    color: rgb(97, 34, 134);
+    
+}
+
+/* aplica a fonte roboto e centraliza o texto no meio do site */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  
+}
+
+p {
+    color: rgb(255, 255, 255);
+
+}
+

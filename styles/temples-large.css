@@ -1,0 +1,94 @@
+/* --- RESET E ESTILOS GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #3b0a60;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* --- GRID DE TEMPLOS (MOBILE FIRST) --- */
+
+/* Por padrão (telas pequenas), as imagens ficam em uma única coluna */
+.album-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    justify-items: center;
+}
+
+.temple-card {
+    width: 100%;
+    text-align: center;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.temple-card figcaption {
+    margin-top: 8px;
+    color: #3b0a60;
+}
+
+/* --- FOOTER --- */
+footer {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+}
+
+/* --- MEDIA QUERIES (Telas Maiores) --- */
+
+/* Quando a tela for maior que 600px (Tablets) */
+@media (min-width: 600px) {
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+}
+
+/* Quando a tela for maior que 900px (Desktop) */
+@media (min-width: 900px) {
+    .album-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas exatamente como na imagem */
+        gap: 30px;
+    }
+}

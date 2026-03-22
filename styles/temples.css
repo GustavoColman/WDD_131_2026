@@ -1,0 +1,112 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #574f6e;
+     /* Roxo escuro da imagem */
+    color: white;
+    padding: 1rem;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container h1 {
+    font-size: 1.5rem;
+}
+
+/* Menu Hambúrguer */
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Grid de Fotos */
+.album-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.temple-card {
+    width: 100%;
+    max-width: 400px; /* Limita a largura no desktop para manter o aspecto da imagem */
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.temple-card figcaption {
+    margin-top: 0.5rem;
+    color: #3b0a60;
+    font-weight: 500;
+}
+
+/* Ajustes para telas maiores (opcional) */
+@media (min-width: 600px) {
+    .album-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Footer ( aquela parte de baixo da pagina com a data e tudo mais )*/
+footer {
+    background-color: #574f6e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.last-mod {
+    color: #ffff00; /* letrinhas em amarelo */
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
