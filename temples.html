@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles\temples.css">
     
 <!--  chama o arquivo temple large que muda o layout em telas maiores-->
-    <link rel="stylesheet" href="temples-large.css" media="(min-width: 600px)">
+    <link rel="stylesheet" href="styles\temples-large.css" media="(min-width: 600px)">
 
     <!-- chama o script de update do site-->
      <script src="scripts\temples.js" type="module"></script>
@@ -17,15 +17,22 @@
 <body>
 
     <header>
-        <div class="header-container">
-            <h1>Temple Album</h1>
-            <button class="menu-button" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    <div class="header-container">
+        <h1>Temple Album</h1>
+        <button class="menu-button" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <main>
         <h2>Home</h2>
