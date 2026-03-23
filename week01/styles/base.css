@@ -64,6 +64,10 @@ h1 {
     margin-bottom: 30px;
 }
 
+h2{
+    color: #ffffff;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 2fr 1fr; /* Coluna da esquerda maior */
@@ -153,6 +157,19 @@ hr {
     color: blue;
     text-decoration: underline;
 }
+
+
+/*tentar chamar a classe weekprojectlist pra mudar a caixa do meu proijeto*/
+
+.weekprojectlist {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Deixa as pontas arredondadas */
+    overflow: hidden; /* Garante que o fundo do header não saia das bordas */
+    max-width: 300px;
+    margin: 20px;
+}
+
 
 /* Footer ( aquela parte de baixo da pagina com a data e tudo mais )*/
 footer {
