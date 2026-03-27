@@ -20,7 +20,7 @@ const windSpeed = 5;
 const calculateWindChill = (temp, speed) => 
     (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(1);
 
-// 4. Lógica de exibição ao carregar a página
+// 4. Lógica de exibição ao carregar a página, mostra o resultado no html
 const displayWindChill = () => {
     const windChillElement = document.querySelector("#wind-chill");
 
