@@ -1,0 +1,101 @@
+/* Eu escolhi uma fonte sem serifa para manter o visual limpo da imagem */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* O cabeçalho eu fiz com o fundo vermelho e borda verde como na referência */
+header {
+    background-color: #009e2f; /* Vermelho */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 8px solid #d8d400; /* Verde */
+}
+
+/* Aqui eu garanto que a imagem preencha o espaço sem distorcer */
+.hero-image img {
+
+
+    /* Primeiro, eu mudo o comportamento de 'inline' para 'block'.
+       Isso faz com que a imagem 'queira' ocupar a linha toda. */
+    display: block;
+
+    /* Em seguida, eu defino as margens laterais como 'auto'.
+       Isso diz ao navegador para dividir o espaço restante
+       igualmente entre a esquerda e a direita. */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* diminui o tamanho da imagem */
+    width: 60%; 
+    /* Garante que não achate a imagem */
+    height: auto;
+}
+
+
+/* Estilizei os cartões de dados com as bordas arredondadas que você pediu */
+.info-card {
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Deixando as bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Usei flexbox aqui para alinhar Labels e Values perfeitamente */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.info-row dt {
+    font-weight: bold;
+    text-align: right;
+    flex: 1;
+    padding-right: 10px;
+}
+
+.info-row dd {
+    flex: 1;
+    margin: 0;
+}
+
+/* Ajustei o ícone de clima para ele não "herdar" o tamanho da hero image */
+.weather-icon {
+    text-align: center;
+    margin: 20px auto; /* Centraliza o contêiner do ícone */
+    width: 100px; /* Aumentei um pouco para o ícone aparecer inteiro */
+}
+
+.weather-icon img {
+    /* Eu forcei o ícone a obedecer o tamanho do contêiner dele (100px) */
+    width: 100%; 
+    height: auto;
+    display: inline-block; /* Ícones geralmente funcionam melhor assim */
+}
+
+/* O rodapé eu também arredondei levemente no topo para combinar */
+footer {
+    background-color: #0051ff; /* azul */
+   
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
