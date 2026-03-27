@@ -1,4 +1,4 @@
-/* --- ESTILOS GERAIS E MOBILE FIRST --- */
+/*  ESTILOS GERAIS E MOBILE   */
 /* Eu mantenho o seu estilo base aqui, que já funciona bem no celular */
 
 body {
@@ -16,7 +16,7 @@ header {
 }
 
 /* No mobile, eu quero que a imagem ocupe a largura total */
-/* --- Eu fiz esta regra afetar APENAS a imagem da onça --- */
+/*  Eu fiz esta regra afetar APENAS a imagem da onça  */
 .hero-container > .hero-image img {
     display: block;
     margin-left: auto;
@@ -25,16 +25,16 @@ header {
     height: auto;
 }
 
-/* --- Eu criei esta regra para estilizar o ícone do clima --- */
+/*  Eu criei esta regra para estilizar o ícone do clima  */
 .weather-icon img {
     /* Eu defini um tamanho máximo para o ícone,
-       para que ele não fique gigante como na imagem. */
-    max-width: 100px; /* Ou um valor que você preferir */
+       para que ele não fique gigante todo bugado e fudido. */
+    max-width: 100px; 
     width: 100%; 
     height: auto;
 }
 
-/* Eu usei flexbox para alinhar o ícone e os dados do clima verticalmente e centralizá-los */
+/* Eu usei flexbox para alinhar o ícone e os dados do clima verticalmente e centralizar */
 .weather-box {
     display: flex;
     flex-direction: column;
@@ -60,9 +60,9 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Estilo do título verde dentro do card (conforme a imagem do PC) */
+/* Estilo do título  dentro do card (conforme a imagem do PC) */
 .info-card h2 {
-    background-color: #007e3a; /* Verde escuro */
+    background-color: #007e3a; 
     color: white;
     padding: 10px;
     margin: -20px -20px 20px -20px; /* Expando para encostar nas bordas do card */
@@ -83,7 +83,7 @@ footer {
     border-top-right-radius: 10px;
 }
 
-/* --- MEDIA QUERY PARA DESKTOP (PC) --- */
+/*  MEDIA QUERY PARA DESKTOP (PC)  */
 /* Eu defini 768px como o ponto de virada para o layout de PC */
 
 @media (min-width: 768px) {
@@ -97,7 +97,7 @@ footer {
     /* Eu mudei os cartões para 'absolute' para sobrepor a imagem */
     .info-card {
         position: absolute;
-        background: rgba(255, 255, 255, 0.85); /* Deixei um pouco transparente como na foto */
+        background: rgba(255, 255, 255, 0.85); /* Deixei um pouco transparente pra ficar zica */
         margin: 0;
         z-index: 10;
     }
@@ -121,3 +121,5 @@ footer {
         border-radius: 0;
     }
 }
+
+//espero que essa merda funcione//
