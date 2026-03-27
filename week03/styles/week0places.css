@@ -1,101 +1,123 @@
-/* Eu escolhi uma fonte sem serifa para manter o visual limpo da imagem */
+/* --- ESTILOS GERAIS E MOBILE FIRST --- */
+/* Eu mantenho o seu estilo base aqui, que já funciona bem no celular */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
 }
 
-/* O cabeçalho eu fiz com o fundo vermelho e borda verde como na referência */
 header {
-    background-color: #009e2f; /* Vermelho */
+    background-color: #009e2f; 
     color: white;
     text-align: center;
     padding: 20px;
-    border-bottom: 8px solid #d8d400; /* Verde */
+    border-bottom: 8px solid #d8d400;
 }
 
-/* Aqui eu garanto que a imagem preencha o espaço sem distorcer */
-.hero-image img {
-
-
-    /* Primeiro, eu mudo o comportamento de 'inline' para 'block'.
-       Isso faz com que a imagem 'queira' ocupar a linha toda. */
+/* No mobile, eu quero que a imagem ocupe a largura total */
+/* --- Eu fiz esta regra afetar APENAS a imagem da onça --- */
+.hero-container > .hero-image img {
     display: block;
-
-    /* Em seguida, eu defino as margens laterais como 'auto'.
-       Isso diz ao navegador para dividir o espaço restante
-       igualmente entre a esquerda e a direita. */
     margin-left: auto;
     margin-right: auto;
-
-    /* diminui o tamanho da imagem */
-    width: 60%; 
-    /* Garante que não achate a imagem */
+    width: 100%; /* No mobile, a onça ocupa a largura total */
     height: auto;
 }
 
+/* --- Eu criei esta regra para estilizar o ícone do clima --- */
+.weather-icon img {
+    /* Eu defini um tamanho máximo para o ícone,
+       para que ele não fique gigante como na imagem. */
+    max-width: 100px; /* Ou um valor que você preferir */
+    width: 100%; 
+    height: auto;
+}
 
-/* Estilizei os cartões de dados com as bordas arredondadas que você pediu */
+/* Eu usei flexbox para alinhar o ícone e os dados do clima verticalmente e centralizá-los */
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+.weather-icon {
+    /* Eu centralizei o contêiner do ícone, já que a imagem
+       dentro dele já está com tamanho limitado. */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
 .info-card {
     margin: 20px auto;
     max-width: 400px;
     padding: 20px;
     background: white;
     border: 1px solid #ddd;
-    border-radius: 15px; /* Deixando as bordas arredondadas */
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-h2 {
-    text-align: center;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+/* Estilo do título verde dentro do card (conforme a imagem do PC) */
+.info-card h2 {
+    background-color: #007e3a; /* Verde escuro */
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 20px -20px; /* Expando para encostar nas bordas do card */
+    border-radius: 15px 15px 0 0;
+    font-size: 1.2rem;
 }
 
-/* Usei flexbox aqui para alinhar Labels e Values perfeitamente */
-.info-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
+.info-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+.info-row dt { font-weight: bold; flex: 1; text-align: right; padding-right: 10px; }
+.info-row dd { flex: 1; }
 
-.info-row dt {
-    font-weight: bold;
-    text-align: right;
-    flex: 1;
-    padding-right: 10px;
-}
-
-.info-row dd {
-    flex: 1;
-    margin: 0;
-}
-
-/* Ajustei o ícone de clima para ele não "herdar" o tamanho da hero image */
-.weather-icon {
-    text-align: center;
-    margin: 20px auto; /* Centraliza o contêiner do ícone */
-    width: 100px; /* Aumentei um pouco para o ícone aparecer inteiro */
-}
-
-.weather-icon img {
-    /* Eu forcei o ícone a obedecer o tamanho do contêiner dele (100px) */
-    width: 100%; 
-    height: auto;
-    display: inline-block; /* Ícones geralmente funcionam melhor assim */
-}
-
-/* O rodapé eu também arredondei levemente no topo para combinar */
 footer {
-    background-color: #0051ff; /* azul */
-   
+    background-color: #0051ff;
     color: white;
     text-align: center;
     padding: 15px;
-    font-size: 0.9em;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+/* --- MEDIA QUERY PARA DESKTOP (PC) --- */
+/* Eu defini 768px como o ponto de virada para o layout de PC */
+
+@media (min-width: 768px) {
+    
+    /* Eu transformo o container em 'relative' para que os cards possam "flutuar" dentro dele */
+    .hero-container {
+        position: relative;
+        width: 100%;
+    }
+
+    /* Eu mudei os cartões para 'absolute' para sobrepor a imagem */
+    .info-card {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.85); /* Deixei um pouco transparente como na foto */
+        margin: 0;
+        z-index: 10;
+    }
+
+    /* Eu posiciono a caixa de 'Data' na esquerda */
+    .data-box {
+        top: 20px;
+        left: 20px;
+        width: 300px;
+    }
+
+    /* Eu posiciono a caixa de 'Weather' na direita */
+    .weather-box {
+        bottom: 20px;
+        right: 20px;
+        width: 250px;
+    }
+
+    /* No PC, eu removo as bordas arredondadas do footer para um visual mais limpo */
+    footer {
+        border-radius: 0;
+    }
 }
