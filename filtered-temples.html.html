@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <!-- chama o arquivo base temple.css -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    
+<!--  chama o arquivo temple large que muda o layout em telas maiores-->
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 600px)">
+
+    <!-- chama o script de update do site-->
+     <script src="scripts/filtered-temples.js" type="module"></script>
+
+</head>
+<body>
+
+    <header>
+    <div class="header-container">
+        <h1>Temple Album</h1>
+        <button class="menu-button" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <h2>Home</h2>
+
+        <section class="album-grid">
+            
+            
+
+            <!-- aqui vão ir o conteudo do java -->
+        </section>
+    </main>
+
+     <footer>
+        <p>&copy;<span id="currentyear"></span> 😎 Gustavo Colman 😎 Brasil</p>
+    
+    <p id="lastModified" class="last-mod"></p>
+    <!-- o id="" serve pra sinalizar ao javascript aonde colocar a informação das funções   -->
+    </footer>
+
+</body>
+</html>

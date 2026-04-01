@@ -1,0 +1,52 @@
+/* Este arquivo é carregado apenas para telas > 600px.
+   Aqui desfazemos o layout de celular e montamos o de desktop.
+*/
+
+/* 1. Esconder o botão de hambúrguer no PC */
+.menu-button {
+    display: none;
+}
+
+/* 2. Mostrar a navegação horizontalmente */
+.navigation {
+    display: flex; /* Garante que o menu apareça */
+    position: static; /* Remove a posição flutuante do mobile */
+    width: auto;
+    background-color: transparent;
+}
+
+.navigation ul {
+    display: flex; /* Alinha os links lado a lado */
+    gap: 20px;
+}
+
+.navigation li {
+    border: none; /* Remove as bordas que separam os itens no mobile */
+}
+
+.navigation a {
+    padding: 0.5rem 10px;
+    font-size: 1rem;
+}
+
+.navigation a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #ffff00; /* Destaque em amarelo ao passar o mouse */
+}
+
+/* 3. Grid de Imagens (3 colunas no PC) */
+.album-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 30px;
+    align-items: start;
+}
+
+.temple-card {
+    max-width: 100%; /* Permite que o card preencha o espaço da coluna do grid */
+}
+
+/* 4. Ajuste do Título Principal */
+header h1 {
+    font-size: 2rem;
+}

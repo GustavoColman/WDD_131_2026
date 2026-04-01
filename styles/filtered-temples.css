@@ -1,0 +1,144 @@
+/* --- RESET E ESTILOS GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* --- CABEÇALHO (HEADER) --- */
+header {
+    background-color: #3b0a60; /* Roxo escuro uniforme */
+    color: white;
+    padding: 1rem;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Necessário para posicionar o menu no mobile */
+}
+
+.header-container h1 {
+    font-size: 1.5rem;
+}
+
+/* --- MENU HAMBÚRGUER (BOTÃO) --- */
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* --- NAVEGAÇÃO (MOBILE) --- */
+.navigation {
+    display: none; /* Escondido por padrão no celular */
+    background-color: #3b0a60;
+    position: absolute;
+    top: 100%; /* Aparece logo abaixo do header */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Classe que o JavaScript vai adicionar ao clicar no botão */
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.navigation a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.navigation a:hover {
+    background-color: #574f6e;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* --- GRID DE TEMPLOS (1 COLUNA NO MOBILE) --- */
+.album-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Força uma coluna no celular */
+    gap: 25px;
+    justify-items: center;
+}
+
+.temple-card {
+    width: 100%;
+    max-width: 350px; /* Garante que não fique gigante em telas médias */
+    text-align: center;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.temple-card figcaption {
+    margin-top: 10px;
+    color: #3b0a60;
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #3b0a60;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.last-mod {
+    color: #ffff00; /* Letras amarelas  */
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
