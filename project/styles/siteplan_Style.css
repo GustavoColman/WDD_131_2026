@@ -1,0 +1,174 @@
+/* Configurações Gerais */
+
+:root {
+    --primary-color: #2b2b2b;  /* O azul claro da sua imagem */
+    --secondary-color: #949494; /* O cinza */
+    --accent-color: #ffffff;    /* O vermelho */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* importar fontes*/
+
+/* Importação das fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=MedievalSharp&display=swap');
+
+/* Aplicando as fontes */
+:root {
+    --heading-font: 'MedievalSharp', serif; /* Similar à Old English */
+    --body-font: 'Alice', serif;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+p, td, li {
+    font-family: var(--body-font);
+}
+
+
+body {
+    /* Fundo em degradê tons de cinza */
+    background: linear-gradient(135deg, #4a4a4a, #1a1a1a);
+    background-attachment: fixed;
+    
+    /* Letras brancas e fonte limpa */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    
+    /* Centralização de todo o conteúdo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal para controlar a largura máxima */
+.cabeçalho, .corpo, .pé {
+    max-width: 800px;
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilização de Títulos e Listas */
+h1 {
+    border-bottom: 2px solid #666;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    color: #f0f0f0;
+}
+
+h2, h3 {
+    margin: 15px 0;
+    color: #cccccc;
+}
+
+ul {
+    list-style-type: none; /* Remove as bolinhas da lista para um visual mais limpo */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+    text-align: justify; /* Melhora a leitura dos parágrafos longos */
+}
+
+/* Estilização das Imagens (Wireframes) */
+.wireframe-1 {
+ display: flex;
+ /* Altera a direção para coluna (uma embaixo da outra) */
+ flex-direction: column; 
+ /* Centraliza horizontalmente as imagens dentro da coluna */
+ align-items: center; 
+ /* Espaço entre as imagens (substitui a necessidade de margem individual) */
+ gap: 30px; 
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+.wireframe-1 img { /* Tamanho máximo para que não fiquem gigantes*/
+ max-width: 100%; /* Permite que ocupem até a largura total do container */
+ /* Define um tamanho ideal, mas que diminui se a tela for menor */
+ width: 900px; 
+ /* Altura automática baseada na largura (isso evita deformação) */
+ height: auto; 
+ 
+ /* Detalhes visuais  */
+ border: 3px solid #555;
+ border-radius: 8px;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.6); /* Sombra um pouco mais forte */
+ /* Garante que a imagem se encaixe sem cortar ou distorcer  */
+ object-fit: contain; 
+}
+
+
+.wireframe-2 {
+ display: flex;
+ /* Altera a direção para coluna (uma embaixo da outra) */
+ flex-direction: column; 
+ /* Centraliza horizontalmente as imagens dentro da coluna */
+ align-items: center; 
+ /* Espaço entre as imagens (substitui a necessidade de margem individual) */
+ gap: 30px; 
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+.wireframe-2 img { /* Tamanho máximo para que não fiquem gigantes, daqui pra frente é tudo igual */
+ max-width: 100%; 
+
+ width: 500px; 
+ /* Altura automática baseada na largura (isso evita deformação) */
+ height: auto; 
+ 
+ /* Detalhes visuais já existentes */
+ border: 3px solid #555;
+ border-radius: 8px;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.6); /* Sombra um pouco mais forte */
+ /* Garante que a imagem se encaixe sem cortar ou distorcer  */
+ object-fit: contain; 
+}
+
+
+/* table de cores do site*/
+
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent {
+    background-color: var(--accent-color) !important;
+    color: #2b2b2b; /* Isso muda a cor da letra para um cinza escuro */
+}
+
+
+
+
