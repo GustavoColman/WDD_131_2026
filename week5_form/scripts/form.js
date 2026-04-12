@@ -36,6 +36,25 @@ const products = [
   }
 ];
 
+// Seleciona o elemento select no HTML
+const productSelect = document.querySelector("#product-name");
+
+// Função para popular as opções
+products.forEach(product => {
+    // Cria um elemento de opção
+    const option = document.createElement("option");
+    
+    // Define o valor interno (o que será enviado ao servidor) como o Nome do produto
+    // conforme exigido na sua instrução ("value attribute that is the product name")
+    option.value = product.name; 
+    
+    // Define o texto que o usuário vê (colocando a primeira letra em maiúscula para ficar bonito)
+    option.textContent = product.name.toUpperCase();
+    
+    // Adiciona a opção dentro do select
+    productSelect.appendChild(option);
+});
+
 
 
 
