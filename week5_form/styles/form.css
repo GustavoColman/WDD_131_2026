@@ -1,0 +1,153 @@
+/* Configurações Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #d1cbd1; /* Tom de cinza arroxeado do fundo */
+    border: 1px solid #999;
+}
+
+/* Cabeçalho e Rodapé */
+.header, .footer {
+    background-color: #300030; /* Roxo escuro */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.footer {
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+/* Formulário */
+.review-form {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.optional {
+    color: #4b0082;
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+
+/* Inputs e Seleções */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0; /* Design retangular da imagem */
+    box-sizing: border-box;
+}
+
+/* Rating e Checkboxes */
+.rating-options {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stars {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    cursor: pointer;
+}
+
+/* Botão */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #eeeeee;
+    border: 1px solid #777;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #ddd;
+}
+
+/* aqui eu ajusto a exibição em navegadores*/
+
+
+
+/* 1. Ajuste no corpo da página para telas maiores ( copiei isso de outro projeto, mas quem liga? ) */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Fundo gradiente suave */
+    min-height: 100vh;
+    align-items: center; /* Centralizacao vertical */
+}
+
+/* 2. Media Query: Regras aplicadas quando a tela for maior que 768px */
+@media (min-width: 768px) {
+    .container {
+        max-width: 90%; /* Expande a largura no PC */
+        margin: 40px auto;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Adiciona sombra para profundidade */
+        border-radius: 8px; /* Arredonda levemente as bordas externas */
+        overflow: hidden; /* Garante que o header/footer acompanhem o arredondamento */
+    }
+
+    /* 3. Organização em duas colunas para campos curtos */
+    .review-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide o formulário em 2 colunas */
+        gap: 20px;
+        padding: 40px;
+    }
+
+    /* Campos que devem ocupar a largura total (coluna inteira) */
+    .form-group:nth-child(1), /* Product Name */
+    .form-group:nth-child(4), /* Features */
+    .form-group:nth-child(5), /* Written Review */
+    .submit-btn {
+        grid-column: span 2;
+    }
+
+    /* Melhora no espaçamento do botão */
+    .submit-btn {
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 4px;
+    }
+}
