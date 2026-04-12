@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="week5_form/styles/form.css">
+</head>
+<body>
+    <div class="container" style="text-align: center; padding: 50px;">
+        <header class="header">
+            <h1>Thank you for your review!</h1>
+        </header>
+        
+        <main style="padding: 20px;">
+            <p>Your feedback is very important to us.</p>
+            <p>Total reviews completed: <span id="review-count">0</span></p>
+            
+            <a href="form.html" style="color: #300030; font-weight: bold;">Submit another review</a>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 😎 Gustavo Colman 😎 Brasil</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let numReviews = Number(window.localStorage.getItem("numReviews-ls")) || 0;
+            numReviews++;
+            window.localStorage.setItem("numReviews-ls", numReviews);
+            document.querySelector("#review-count").textContent = numReviews;
+        });
+    </script>
+</body>
+</html>

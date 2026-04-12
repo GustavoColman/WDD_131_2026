@@ -1,6 +1,4 @@
-/* =========================================
-   1. CONFIGURAÇÕES GERAIS E RESET
-   ========================================= */
+/* 1 CONFIGURAÇÕES GERAIS E RESET*/
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Fundo web moderno */
@@ -20,11 +18,9 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* =========================================
-   2. CABEÇALHO E RODAPÉ
-   ========================================= */
+/* 2 CABEÇALHO E RODAPÉ*/
 .header, .footer {
-    background-color: #300030; /* Roxo escuro */
+    background-color: #494949; /* Roxo escuro */
     color: white;
     text-align: center;
     padding: 15px;
@@ -44,9 +40,7 @@ body {
     margin: 5px 0;
 }
 
-/* =========================================
-   3. ESTRUTURA DO FORMULÁRIO
-   ========================================= */
+/* 3. ESTRUTURA DO FORMULÁRIO*/
 .review-form {
     padding: 20px;
 }
@@ -64,12 +58,12 @@ label {
 }
 
 .optional {
-    color: #4b0082;
+    color: #474747;
     font-weight: normal;
     font-size: 0.8rem;
 }
 
-/* Inputs, Select e Textarea */
+/* Inputs, Select e Text area */
 input[type="text"],
 input[type="date"],
 select,
@@ -85,7 +79,7 @@ textarea {
 /* Validação Visual (Required) */
 input:required:invalid, 
 select:required:invalid {
-    border-left: 6px solid #b30000; /* Destaque vermelho para obrigatórios vazios */
+    border-left: 6px solid #b30000; /* Destaque vermelho para obrigatórios vazios ( burrão não sabe preencher um campo vazio kkkkk )*/
 }
 
 input:required:valid, 
@@ -93,9 +87,7 @@ select:required:valid {
     border-left: 6px solid #006400; /* Destaque verde para preenchidos */
 }
 
-/* =========================================
-   4. RATING (ESTRELAS) E CHECKBOXES
-   ========================================= */
+/* 4 RATING (ESTRELAS) E CHECKBOXES*/
 .rating-options {
     display: flex;
     justify-content: space-between;
@@ -114,7 +106,7 @@ select:required:valid {
 
 .stars {
     font-size: 1.2rem;
-    color: #4b0082;
+    color: #474747;
     margin-bottom: 4px;
 }
 
@@ -132,9 +124,7 @@ select:required:valid {
     margin-bottom: 8px;
 }
 
-/* =========================================
-   5. BOTÃO DE ENVIO (POST REVIEW)
-   ========================================= */
+/*  5. BOTÃO DE ENVIO (POST REVIEW)*/
 .submit-btn {
     width: 100%;
     padding: 15px;
@@ -151,14 +141,12 @@ select:required:valid {
 }
 
 .submit-btn:hover {
-    background-color: #300030;
+    background-color: #49485a;
     color: white;
     border-color: #000;
 }
 
-/* =========================================
-   6. ADAPTAÇÃO PARA FORMATO WEB (DESKTOP)
-   ========================================= */
+/* 6 ADAPTAÇÃO PARA FORMATO WEB (DESKTOP) */
 @media (min-width: 768px) {
     body {
         align-items: center; /* Centraliza verticalmente no desktop */
