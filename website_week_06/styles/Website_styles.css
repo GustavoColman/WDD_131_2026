@@ -1,0 +1,83 @@
+/* Reset básico para tirar margens indesejadas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif; /* Fonte clássica para o estilo do logo */
+}
+
+body {
+    background: linear-gradient(180deg, #1a1a1a 0%, #2c2c2e 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Estilização do Topo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid #444;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* Estilo do Carrossel */
+#hero-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0 50px;
+}
+
+.slide-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    gap: 40px;
+    transition: opacity 0.8s ease-in-out; /* O efeito de fade acontece aqui */
+}
+
+/* Classe que vamos adicionar via JS para sumir e aparecer */
+.fade-out {
+    opacity: 0;
+}
+
+.image-box img {
+    max-width: 600px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.content-box p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 400px;
+    color: #eee;
+}
